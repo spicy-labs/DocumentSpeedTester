@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "CHILI Document Tester",
+  "version": "0.2",
+  "permissions": [
+    "webRequest",
+    "activeTab",
+    "tabs",
+    "storage",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*.chili-publish.online/*",
+    "*://*.chiligrafx.com/*",
+    "*://*.chili-publish-sandbox.online/*"
+  ],
+  "icons": { "16": "16.png",
+           "48": "40.png",
+          "128": "128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.chili-publish.online/*",
+        "*://*.chiligrafx.com/*",
+        "*://*.chili-publish-sandbox.online/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

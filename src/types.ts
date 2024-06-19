@@ -1,0 +1,15 @@
+export type TestData = {
+  testIndex: number,
+  testLength: number,
+  foundUrls: string[],
+  startTime: number,
+  lastRequestTimings: number[],
+  trackedUrls: string[],
+  mode: "skip" | "prepare" | "test",
+  reload: boolean,
+  sleep: boolean,
+  maxSleepTime: number,
+  tabId?: number,
+  type?: "studio-ui" | "publisher",
+  download?: boolean,
+}
