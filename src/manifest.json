@@ -17,9 +17,7 @@
     "*://*.chiligrafx.com/*",
     "*://*.chili-publish-sandbox.online/*"
   ],
-  "icons": { "16": "16.png",
-           "48": "40.png",
-          "128": "128.png" },
+  "icons": {},
   "content_scripts": [
     {
       "matches": [
@@ -27,7 +25,9 @@
         "*://*.chiligrafx.com/*",
         "*://*.chili-publish-sandbox.online/*"
       ],
-      "js": ["content.js"]
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "action": {
